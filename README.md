@@ -1,68 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 360° 3D “Brain Rot” Portfolio
 
-## Features
+Interactive WebGL/Three.js experiment that builds a 360° 3D animated “brain rot” style portfolio world inside a single-page Next.js app.
 
-- **Next.js 16** with App Router
-- **Three.js** installed and ready to use
-- **Next.js Image** configured for:
-  - External image providers (Unsplash, Pexels, Pixabay)
-  - Local images from `public/images/` directory
-  - High-resolution background images with optimized loading
+---
 
-## Getting Started
+### Purpose
 
-First, run the development server:
+- **Showcase**: Example of a custom Three.js Web 3D experience for use in a portfolio.
+- **Focus**: Camera systems, animated environment, and interactive experience design.
+
+---
+
+### Tech Stack
+
+- **Framework**: Next.js (App Router)
+- **3D Engine**: Three.js (WebGL)
+- **Language**: TypeScript + React
+
+---
+
+### 3D Experience & Scene
+
+- **360° environment**: Skybox / environment textures used to create a wrapped “world” effect.
+- **Custom scene graph**: Multiple objects and “points of interest” arranged to feel like sections of a portfolio.
+- **Animated elements**: Looping object motion and material/lighting animations for a “brain rot” visual style.
+
+---
+
+### Cameras & Interaction
+
+- **Multiple camera perspectives**: Different camera positions/targets to frame separate objects/views.
+- **Tour / walkthrough logic**: Programmatic transitions between camera states to simulate a guided tour.
+- **Orbit / look-around controls**: User can look around the scene from key camera anchors (where supported).
+
+---
+
+### Running Locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open `http://localhost:3000` in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-## Image Configuration
+### Live Demo
 
-### External Image Providers
+`https://brain-rot-portfolio.vercel.app/`
 
-The project is configured to use images from:
-- Unsplash (`images.unsplash.com`)
-- Pexels (`images.pexels.com`)
-- Pixabay (`cdn.pixabay.com`)
-
-You can add more providers by updating `next.config.ts`.
-
-### Local Images
-
-Place your high-resolution images in the `public/images/` directory and reference them as:
-
-```tsx
-<Image src="/images/your-image.jpg" alt="Description" width={1920} height={1080} />
-```
-
-### Example Component
-
-See `src/components/ImageExamples.tsx` for examples of using both external and local images.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
