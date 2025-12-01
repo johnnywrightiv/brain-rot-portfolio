@@ -1,5 +1,14 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Features
+
+- **Next.js 16** with App Router
+- **Three.js** installed and ready to use
+- **Next.js Image** configured for:
+  - External image providers (Unsplash, Pexels, Pixabay)
+  - Local images from `public/images/` directory
+  - High-resolution background images with optimized loading
+
 ## Getting Started
 
 First, run the development server:
@@ -17,6 +26,29 @@ bun dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+## Image Configuration
+
+### External Image Providers
+
+The project is configured to use images from:
+- Unsplash (`images.unsplash.com`)
+- Pexels (`images.pexels.com`)
+- Pixabay (`cdn.pixabay.com`)
+
+You can add more providers by updating `next.config.ts`.
+
+### Local Images
+
+Place your high-resolution images in the `public/images/` directory and reference them as:
+
+```tsx
+<Image src="/images/your-image.jpg" alt="Description" width={1920} height={1080} />
+```
+
+### Example Component
+
+See `src/components/ImageExamples.tsx` for examples of using both external and local images.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
